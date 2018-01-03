@@ -2,13 +2,6 @@ const WALIYUN = require('waliyun')
 const IOT = WALIYUN.IOT;
 
 
-let config = {
-    Api: 'https://iot.cn-shanghai.aliyuncs.com/',
-    AccessKeyId: 'LTAIY7nhfy6xRklg',
-    AccessKeySecret: 'vDyyiiQDgDe3naW4mzMvcRYJQuWBp1',
-    Version: '2017-04-20'
-};
-
 class Iot {
     constructor(config) {
         this.client = IOT({
