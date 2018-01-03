@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "eggPlugin": {
-    "name": "iot"
+    "name": "iot",
+    "env": [ "local", "test", "prod" ]
   },
   "keywords": [
     "egg",
