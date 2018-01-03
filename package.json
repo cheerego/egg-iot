@@ -4,7 +4,11 @@
   "description": "",
   "eggPlugin": {
     "name": "iot",
-    "env": [ "local", "test", "prod" ]
+    "env": [
+      "local",
+      "test",
+      "prod"
+    ]
   },
   "keywords": [
     "egg",
@@ -40,6 +44,7 @@
   "files": [
     "app.js",
     "agent.js",
+    "iot.js",
     "config"
   ],
   "ci": {
