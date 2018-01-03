@@ -1,5 +1,6 @@
 const WALIYUN = require('waliyun')
 const IOT = WALIYUN.IOT;
+const util = require('util');
 
 
 class Iot {
