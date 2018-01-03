@@ -293,8 +293,20 @@ class Iot {
         });
     }
 
-    genMsgId(appId = '') {
-        return appId == '' ? util.format('msg_%s', uniqid()) : util.format('msg_%s_%s', appId, uniqid());
+    msgId(appId = '') {
+        return appId === '' ? util.format('msg_%s', uniqid()) : util.format('msg_%s_%s', appId, uniqid());
+    }
+
+    request(){
+        return {
+            timestamp: Date.now(),
+            msg_id: msgId,
+            msg_type: msgType,
+            msg_body: {
+                protocol: protocol,
+                data: data
+            }
+        }
     }
 }
 
