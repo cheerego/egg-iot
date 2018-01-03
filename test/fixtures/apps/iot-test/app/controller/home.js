@@ -4,7 +4,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-      this.ctx.body =await this.app.iot.GetDeviceShadow('pRb1mK8CTPJ', 'CATCH_100010');
+      console.log(this.app.plugins);
+    this.ctx.body = 'hi, ' + this.app.plugins.iot.name;
   }
 }
 
