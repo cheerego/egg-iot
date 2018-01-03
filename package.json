@@ -41,6 +41,12 @@
     "pkgfiles": "egg-bin pkgfiles",
     "autod": "autod"
   },
+  "files": [
+    "app.js",
+    "agent.js",
+    "iot.js",
+    "config"
+  ],
   "ci": {
     "version": "8, 9"
   },
