@@ -1,6 +1,7 @@
 const WALIYUN = require('waliyun')
 const IOT = WALIYUN.IOT;
 const util = require('util');
+const uniqid = require('uniqid');
 
 
 class Iot {
