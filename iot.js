@@ -297,4 +297,4 @@ class Iot {
     }
 }
 
-module.exports = IOT;
+module.exports = Iot;
