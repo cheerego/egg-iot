@@ -5,8 +5,5 @@ module.exports = app => {
 function createIot(config, app) {
     // 创建实例
     const IOT = require('./iot');
-    const client = new IOT(config);
-
-
-    return client;
+    return new IOT(config);
 }
