@@ -295,13 +295,9 @@ class Iot {
         });
     }
 
-    msgId(appId = '') {
-        return appId === '' ? util.format('msg_%s', uniqid()) : util.format('msg_%s_%s', appId, uniqid());
-    }
-
-    request(){
+    request(msgId = '', msgType = '', protocol = '', data = {}) {
         return {
-            timestamp: Date.now(),
+            timestamp: new Date().getTime(),
             msg_id: msgId,
             msg_type: msgType,
             msg_body: {
@@ -309,6 +305,10 @@ class Iot {
                 data: data
             }
         }
+    }
+
+    msgId(appId = '') {
+        return appId == '' ? util.format('msg_%s', uniqid()) : util.format('msg_%s_%s', appId, uniqid());
     }
 }
 
