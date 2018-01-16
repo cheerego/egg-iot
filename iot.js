@@ -157,7 +157,7 @@ class Iot {
         // for ($i = 0; $i < count($DeviceNames); $i ++) {
         //     $this->queryParameters["DeviceName.".($i+1)] = $DeviceNames[$i];
         // }
-        let len = DeviceNames.left;
+        let len = DeviceNames.length;
         let obj = {};
         for (let i = 0; i < len; i++) {
             Object.assign(obj, {
