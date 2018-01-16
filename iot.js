@@ -302,7 +302,8 @@ class Iot {
     async UpdateDeviceShadow(ProductKey, DeviceName, ShadowMessage) {
         return await this.client.UpdateDeviceShadow({
             ProductKey,
-            DeviceName
+            DeviceName,
+            ShadowMessage
         });
     }
 
