@@ -148,14 +148,25 @@ class Iot {
     /**
      * 批量获取设备状态
      * @param ProductKey
-     * @param DeviceName
+     * @param DeviceName Array
      * @returns {Promise<*>}
      * @constructor
      */
     async BatchGetDeviceState(ProductKey, DeviceNames) {
-        return await this.client.BatchGetDeviceState({
-            ProductKey, DeviceNames
-        });
+        // $this->DeviceNames = $DeviceNames;
+        // for ($i = 0; $i < count($DeviceNames); $i ++) {
+        //     $this->queryParameters["DeviceName.".($i+1)] = $DeviceNames[$i];
+        // }
+        let len = DeviceNames.left;
+        let obj = {};
+        for (let i = 0; i < len; i++) {
+            Object.assign(obj, {
+                ['DeviceName.' + (i + 1)]: DeviceNames[i]
+            });
+        }
+        return await this.client.BatchGetDeviceState(Object.assign({
+            ProductKey
+        }, obj));
     }
 
 
